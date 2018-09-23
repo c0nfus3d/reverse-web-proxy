@@ -27,7 +27,7 @@ https.createServer({
   var dir = path.shift();
 
   if(typeof config.routes.folder[dir] !== 'undefined') {
-    /** Since the first folder name was shifted, this will result in ex: pathto/myfile.html */
+    /** Since the first folder name was shifted off the beginning of the array, this will result in ex: pathto/myfile.html */
     req.url = path.join("/");
     proxy.web(req, res, { target: config.routes.folder[dir] });
   }
