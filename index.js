@@ -21,13 +21,13 @@ https.createServer({
 }, function (req, res) {
   /** Split the requested URL path, ex: /server1/pathto/myfile.html */
   var path = req.url.split("/");
-    /** The first value is blank and not needed, so shift it off the front of the array */
+    /** The first value is blank and not needed, so shift it off the beginning of the array */
     path.shift()
-  /** Shift the first folder name from the URL, ex: server1 */
+  /** Shift the first folder name from the path, ex: server1 */
   var dir = path.shift();
 
   if(typeof config.routes.folder[dir] !== 'undefined') {
-    /** Since the first folder name was shifted off the beginning of the array, this will result in ex: pathto/myfile.html */
+    /** Since the first folder name was shifted off of the array, this will result in ex: pathto/myfile.html */
     req.url = path.join("/");
     proxy.web(req, res, { target: config.routes.folder[dir] });
   }
