@@ -1,0 +1,19 @@
+{
+  "name": "reverse-web-proxy",
+  "version": "1.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Josh Richard <https://github.com/c0nfus3d>",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "http-proxy": "^1.17.0",
+    "https": "^1.0.0"
+  }
+}
