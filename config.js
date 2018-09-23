@@ -10,8 +10,8 @@ module.exports = {
     default: "http://main-server/",
     /** List of folders to URLs */
     folder: {
-      server1: "http://server1/myapp/",
-      server2: "http://server2/"
+      "server1": "http://server1/myapp/",
+      "server2": "http://server2/"
     }
   }
 };
