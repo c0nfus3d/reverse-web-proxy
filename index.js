@@ -22,7 +22,7 @@ https.createServer({
   /** Split the requested URL path, ex: /server1/pathto/myfile.html */
   var path = req.url.split("/");
   /** The first value is blank and not needed, so shift it off the beginning of the array */
-  path.shift()
+  path.shift();
   /** Shift the first folder name from the path, ex: server1 */
   var dir = path.shift();
 
